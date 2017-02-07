@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<ul>
+{% if notification %}
+{% for notify in notification %}
+		<li><strong>{{ notify.from_user.username }} has commented on {{ notify.to_user.username }} profile</strong></li>
+	{% endfor %}
+	</ul>
+{% endif %}
+{% endblock %}
